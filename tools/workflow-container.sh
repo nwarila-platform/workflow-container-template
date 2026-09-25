@@ -265,7 +265,7 @@ PY
     mv -f "$receipt_tmp" "$verification_receipt"
   fi
 else
-  printf 'workflow-launcher: WARNING: cosign unavailable; image signature UNVERIFIED\n' >&2
+  die 'cosign is required to verify the image signature'
 fi
 
 pins="$run_tmp/pins"
