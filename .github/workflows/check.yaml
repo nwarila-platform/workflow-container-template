@@ -1,0 +1,27 @@
+# Purpose: the one workflow a consumer calls to run this container through the organization runner.
+# Role: declares the container's name (its last line), access tier and template and patch flags, so a
+# consumer cannot raise its own access (rulings A19, A20). The consumer supplies only the release pin.
+name: check
+on:
+  workflow_call:
+    inputs:
+      version: {required: true, type: string}
+      digest: {required: true, type: string}
+permissions:
+  contents: read
+jobs:
+  run:
+    name: v${{ inputs.version }}
+    # renovate: datasource=git-refs depName=nwarila-platform/.github packageName=https://github.com/nwarila-platform/.github.git currentValue=main
+    uses: nwarila-platform/.github/.github/workflows/run-container.yaml@0188f9cc9d325aaa1d173286da9a2ba99210b09c
+    permissions:
+      contents: read
+      security-events: write
+    with:
+      version: ${{ inputs.version }}
+      digest: ${{ inputs.digest }}
+      contract: 1
+      tier: offline
+      templates: false
+      patch: false
+      name: container-template

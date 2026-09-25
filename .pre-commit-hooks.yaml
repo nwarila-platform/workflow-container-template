@@ -1,0 +1,7 @@
+- id: container-template
+  name: container-template workflow container
+  entry: tools/workflow-container.sh container-template check
+  language: script
+  pass_filenames: false
+  always_run: true
+  stages: [pre-push]

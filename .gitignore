@@ -1,0 +1,58 @@
+# Deny-all (org ADR-0003): nothing is tracked unless it is allowed below by name, so publishing a file
+# is an explicit act. Every directory on the path to an allowed file is re-included first.
+**
+
+# --- directory spine
+!/.github/
+!/.github/.config/
+!/.github/workflows/
+!/checker/
+!/docs/
+!/docs/decision-records/
+!/docs/decision-records/org/
+!/tests/
+!/tools/
+
+# --- repository and GitHub configuration
+!/.dockerignore
+!/.editorconfig
+!/.gitattributes
+!/.gitignore
+!/.pre-commit-hooks.yaml
+!/.github/CODEOWNERS
+!/.github/renovate.json5
+!/.github/.config/template-drift.yaml
+!/.github/.config/template-drift.lock
+!/.github/workflows/check.yaml
+!/.github/workflows/ci.yaml
+!/.github/workflows/publish.yaml
+!/.github/workflows/workflow-containers.yaml
+
+# --- documents, and the organization's decision records (governed by nwarila-platform/.github)
+!/LICENSE
+!/README.md
+!/SECURITY.md
+!/docs/decision-records/org/.gitkeep
+!/docs/decision-records/org/0001-use-architecture-decision-records.md
+!/docs/decision-records/org/0002-adopt-diataxis-documentation-framework.md
+!/docs/decision-records/org/0003-use-deny-all-gitignore-strategy.md
+!/docs/decision-records/org/0004-use-renovate-for-dependency-updates.md
+!/docs/decision-records/org/0005-keep-github-control-planes-namespace-local.md
+
+# --- the container: image, release version, checker, tests and tools
+!/Containerfile
+!/VERSION
+!/checker/__init__.py
+!/checker/__main__.py
+!/tests/host.sh
+!/tests/image.sh
+!/tests/test_checker.py
+!/tools/install-crane.sh
+!/tools/workflow-container.sh
+
+# --- the template's own manifest (a generated repository may delete it)
+!/template-drift.json
+
+# --- never tracked, even by a future allowance
+__pycache__/
+/dist/
