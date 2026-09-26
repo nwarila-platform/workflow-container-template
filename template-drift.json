@@ -1,0 +1,125 @@
+{
+  "version": 3,
+  "checks": [
+    {
+      "mode": "bytes_equal",
+      "path": ".editorconfig",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": ".gitattributes",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": ".github/renovate.json5",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": ".github/workflows/ci.yaml",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": ".github/workflows/publish.yaml",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": "SECURITY.md",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": "tools/install-crane.sh",
+      "severity": "error"
+    },
+    {
+      "mode": "bytes_equal",
+      "path": "tools/workflow-container.sh",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".dockerignore",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".gitignore",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".github/.config/template-drift.lock",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".github/.config/template-drift.yaml",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".github/CODEOWNERS",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".github/workflows/check.yaml",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".github/workflows/workflow-containers.yaml",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": ".pre-commit-hooks.yaml",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": "Containerfile",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": "LICENSE",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": "README.md",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": "VERSION",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": "tests/host.sh",
+      "severity": "error"
+    },
+    {
+      "mode": "must_exist",
+      "path": "tests/image.sh",
+      "severity": "error"
+    },
+    {
+      "mode": "must_be_absent",
+      "path": ".github/dependabot.yml",
+      "severity": "error"
+    },
+    {
+      "mode": "must_be_absent",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "severity": "error"
+    }
+  ]
+}
